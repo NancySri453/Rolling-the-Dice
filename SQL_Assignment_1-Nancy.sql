@@ -1,4 +1,4 @@
--- 1. Creatinng a Database e_commerce  
+-- 1. Creating a Database e_commerce  
 Create database e_commerce
 use e_commerce   
 
