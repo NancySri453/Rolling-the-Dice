@@ -1,12 +1,12 @@
 -- 1. Creating a Database e_commerce  
-Create database e_commerce
+create database e_commerce
 use e_commerce   
 
 -- 2. Create Customers Table : 
-Create table Customers(customer_id int auto_increment primary key, name varchar(50), email varchar(50), mobile varchar(15));
+create table Customers(customer_id int auto_increment primary key, name varchar(50), email varchar(50), mobile varchar(15));
 
 -- 3. Create Products Table : 
-Create table Products(id int , name varchar(50) not null , description varchar(200),price 
+create table Products(id int , name varchar(50) not null , description varchar(200),price 
 decimal(10,2) not null , category varchar(50));
 
 -- 4.Modify Tables(Using Alter Keyword)
