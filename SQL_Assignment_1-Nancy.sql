@@ -1,13 +1,12 @@
 -- 1. Creatinng a Database e_commerce  
-CREATE Database e_commerce
-USE e_commerce   
+Create database e_commerce
+use e_commerce   
 
 -- 2. Create Customers Table : 
-CREATE TABLE Customers(customer_id INT auto_increment PRIMARY KEY, name 
-VARCHAR(50), email VARCHAR(50), mobile VARCHAR(15));
+Create table Customers(customer_id int auto_increment primary key, name varchar(50), email varchar(50), mobile varchar(15));
 
 -- 3. Create Products Table : 
-CREATE TABLE Products(id int , name varchar(50) not null , description varchar(200),price 
+Create table Products(id int , name varchar(50) not null , description varchar(200),price 
 decimal(10,2) not null , category varchar(50));
 
 -- 4.Modify Tables(Using Alter Keyword)
@@ -15,7 +14,7 @@ decimal(10,2) not null , category varchar(50));
     alter table Customers modify namem varchar(50) not null, modify email varchar(50) not null;
 
     -- b. Add unique key on email in the Customers table
-    Alter  table Customers add constraint unique_email unique(email);
+    alter  table Customers add constraint unique_email unique(email);
 
     -- c. Add column age in the Customers table 
     alter table Customers add column age int;
@@ -153,8 +152,7 @@ select customer_id , SUM(quantity) as total_quantity from Orders group by
 customer_id;
 
 -- h. List All Orders with Customer Name and Product Name
-select Orders.order_id ,Customers.name as customer_name, Products.name as 
-product_name from Orders join Customers on Orders.customer_id = Customers.customer_id join Products on Orders.product_id = Products.product_id
+select Orders.order_id ,Customers.name as customer_name, Products.name as product_name from Orders join Customers on Orders.customer_id = Customers.customer_id join Products on Orders.product_id = Products.product_id
 
 -- i. Find products that have never been ordered 
 select * from products where product_id not in (select distinct product_id from Orders);
