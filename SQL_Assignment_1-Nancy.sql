@@ -153,7 +153,7 @@ select customer_id , SUM(quantity) as total_quantity from Orders group by
 customer_id;
 
 -- h. List All Orders with Customer Name and Product Name
-select Orders.order_id , Customers.name as customer_name, Products.name as 
+select Orders.order_id ,Customers.name as customer_name, Products.name as 
 product_name from Orders join Customers on Orders.customer_id = Customers.customer_id join Products on Orders.product_id = Products.product_id
 
 -- i. Find products that have never been ordered 
