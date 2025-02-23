@@ -156,5 +156,5 @@ customer_id;
 select Orders.order_id , Customers.name as customer_name, Products.name as 
 product_name from Orders join Customers on Orders.customer_id = Customers.customer_id join Products on Orders.product_id = Products.product_id
 
--- i. Find products that have never been ordered
+-- i. Find products that have never been ordered 
 select * from products where product_id not in (select distinct product_id from Orders);
